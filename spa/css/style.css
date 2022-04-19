@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+:root{
+    --tileBorderRadius: 4px;
+}
 body,
 ul {
     margin: 0px;
@@ -10,6 +12,7 @@ ul {
 
 body{
     background-color: #020202;
+    overflow-x: hidden;
 }
 
 a {
@@ -24,6 +27,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 
 }
 
@@ -50,6 +54,7 @@ header img {
 }
 
 .banner-top{
+    height: 300px;
 }
 
 
@@ -168,6 +173,64 @@ header img {
 }
 
 
+.thumbSection {
+    padding-top: 3%;
+    color: #fff;
+}
+
+.thumbTitle {
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 600;
+    margin: 0 4% 12px;
+}
+
+.thumbTiles.swiper-container {
+    padding: 0 4%;
+}
+
+.thumbTile {
+    width: 50%;
+}
+
+.thumbTile__image {
+    width: 100%;
+    border-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev,
+.thumbTiles .swiper-button-next {
+    position: relative;
+    height: 100px;
+    width: 20px;
+    margin: 0;
+    background-color: rgba(20, 20, 20, 0.5);
+    top: -100px;
+}
+
+.thumbTiles .swiper-button-prev {
+    margin-left: -7%;
+    float: left;
+    border-top-right-radius: var(--tileBorderRadius);
+    border-bottom-right-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-next {
+    margin-right: -7%;
+    float:right;
+    border-top-left-radius: var(--tileBorderRadius);
+    border-bottom-left-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev::after,
+.thumbTiles .swiper-button-next::after {
+    color: #fff;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: transform 0.1s ease-out;
+}
+
+
 
 /*        MEDIAQUERY 880px                     */
 
@@ -214,6 +277,22 @@ header img {
     #menu a{
         
         border-bottom: 0px;
+    }
+
+    .thumbTiles .swiper-button-prev::after,
+    .thumbTiles .swiper-button-next::after {
+        display: none;
+        font-size: 2.4vw;
+    }
+
+    .thumbTiles .swiper-button-prev:hover::after,
+    .thumbTiles .swiper-button-next:hover::after {
+        transform: scale(1.25);
+    }
+
+    .thumbTiles:hover .swiper-button-prev::after,
+    .thumbTiles:hover .swiper-button-next::after {
+        display: block;
     }
 
 
