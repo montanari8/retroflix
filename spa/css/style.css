@@ -8,15 +8,27 @@ ul {
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background-color: #020202;
+}
+
 a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
+#container{
+    background: rgba(22, 22, 22, 0.3) ;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
+    url('../img/thumb-1920-1108220.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 header{
-    position: absolute;
     width: 100%;
-    z-index: 999;
 }
 
 a:hover {
@@ -34,25 +46,10 @@ header img {
 
 #header {
     box-sizing: border-box;
-    height: 130px;
-    background: rgba(58, 58, 58, 0.3) ;
-    
+    height: 120px;
 }
 
 .banner-top{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5)),
-    url('../img/thumb-1920-1108220.jpg');
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.banner-top img{
-    width: 100%;
-    top: 0;
 }
 
 
@@ -60,6 +57,8 @@ header img {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+    
+    margin: auto;
     
 }
 
@@ -69,21 +68,23 @@ header img {
 
 
 #menu {
-    display: block;
     position: absolute;
+    display: block;
     width: 100%;
     list-style: none;
-    top: 70px;
+    top: 68px;
     right: 0px;
     transition: 0.6s;
     z-index: 1000;
     height: 0px;
     visibility: hidden;
     overflow-y: hidden;
+    background-color: rgb(15, 15, 15);
 }
 
 #nav.active #menu {
-    height: calc(100vh - 80px);
+    position: absolute;
+    height: calc(80vh - 68px);
     visibility: visible;
     overflow-y: auto;
     background: rgba(34, 34, 34, 0.97);
@@ -95,7 +96,7 @@ header img {
     display: block;
     padding: 0.5rem;
     margin: 0 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.05);
   }
 
 #btn-mobile {
@@ -172,8 +173,8 @@ header img {
 
 @media (min-width: 880px) {
 
-    header{
-        height: 100px;
+    #header{
+        height: 110px;
     }
  
 
@@ -181,14 +182,18 @@ header img {
        display: flex;
        justify-content: space-between;
        align-items: center;
+       background-color: rgba(7, 7, 15, 0.7);
    }
 
 
     #menu {
+        margin-top: 7px;
         display: flex;
         gap: 0.5rem;
         height: auto;
         visibility: visible;
+        background-color: rgba(7, 7, 8, 0.7);
+        box-shadow: 100px 10px 20px #020202;
     }
 
     
@@ -206,13 +211,15 @@ header img {
         position: relative;
     }
 
+    #menu a{
+        
+        border-bottom: 0px;
+    }
+
 
 }
 
 /*        MEDIAQUERY 1100px                     */
 
-@media (min-width: 1080px) {
-    #header{
-        max-width: 1280px;
-    }
+@media (min-width: 1100px) {
 }
