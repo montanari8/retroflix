@@ -54,13 +54,19 @@ header img {
 }
 
 .banner-top{
+    
+    margin-left: -35px;
     height: 45%;
+    width: 100%;
 }
 
 .banner-top iframe{
+    width: 98%;
+    height: 230px;
 }
 
 .banner-top figure{
+    width: 100%;
     opacity: 0.4;
 }
 
@@ -274,6 +280,8 @@ header img {
 }
 
 
+
+
 /*====================== MEDIAQUERY 880px ==========================*/
 
 @media (min-width: 880px) {
@@ -321,7 +329,10 @@ header img {
         border-bottom: 0px;
     }
 
-   
+    .banner-top iframe{
+        width: 98%;
+        height: 450px;
+    }
 
 /* ==================================== Slider Produtos ============================================= */
 
@@ -375,6 +386,11 @@ header img {
     .banner-top img{
         width: 60%;
         background-position: center;
+    }
+
+    .banner-top iframe{
+        width: 720px;
+        height: 405px;
     }
 
 
