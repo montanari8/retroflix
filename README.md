@@ -7,9 +7,7 @@
 
 <ol>
     <li>SPA - FRONTEND</li>
-    <li>API - BACKEND</li>
-    <li>NOSQL - MONGODB</li>
-    <li>SQL - MYSQL</li>
+    
 </ol>
 
 <br>
@@ -18,4 +16,5 @@
 <ul>
     <li>Main - Principal - Pós-produção</li>
     <li>Spa  - Single Page Applications - Frontend - Branch de Produção</li>
+    <li>Spa  - Single Page Applications - Frontend - slide produtos</li>
 </ul>
