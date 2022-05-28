@@ -280,8 +280,57 @@ header img {
 }
 
 
+.footer-main{
+    background-color: rgba(29, 29, 29, 0.4);
+    width: 100%;
+    height: 300px;
+}
+
+.container-footer{
+    max-width: 95%;
+    display: flex;
+    justify-content: space-around;    
+    flex-wrap: wrap;
+    padding: 5px;
+    color: #fff;
+}
+
+.container-footer img{
+    width: 250px;
+    margin: center;
+}
+.footer-col{
+    width: 300px;
+    
+}
+
+.footer-social{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-social img{
+
+    width: 35px;
+    height: 35px;
+    margin: 7px;
+}
 
 
+.menu-footer{
+    margin-top: 15px;
+    list-style: none;
+
+}
+
+.menu-footer ul{
+    padding: 7px;
+}
+
+.menu-footer li{
+    line-height: 22pt;
+    text-align: left;
+}
 /*====================== MEDIAQUERY 880px ==========================*/
 
 @media (min-width: 880px) {
@@ -363,7 +412,7 @@ header img {
     background: rgba(22, 22, 22, 0.3) ;
     background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
     url('../img/thumb-1920-1108220.jpg');
-    background-position: right;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     overflow-x: hidden;
