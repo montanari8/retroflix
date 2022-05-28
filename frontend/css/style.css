@@ -305,6 +305,7 @@ header img {
 }
 
 .footer-social{
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
 }
