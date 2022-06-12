@@ -1,0 +1,467 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --tileBorderRadius: 4px;
+}
+body,
+ul {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #020202;
+    overflow-x: hidden;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#container{
+    background: rgba(22, 22, 22, 0.3) ;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
+    url('../img/thumb-1920-1108220.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 180%;
+    overflow-x: hidden;
+
+}
+
+header{
+    width: 100%;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+header img {
+    width: 90px;
+}
+
+#header {
+    display: block;
+    box-shadow: 5px 10px 35px #2c2c2c;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 120px;
+}
+
+.banner-top{
+    
+    margin-left: -35px;
+    height: 45%;
+    width: 100%;
+}
+
+.banner-top iframe{
+    width: 98%;
+    height: 230px;
+}
+
+.banner-top figure{
+    width: 100%;
+    opacity: 0.4;
+}
+
+.banner-top figure:hover{
+    opacity: 1;
+}
+.container-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    
+    margin: auto;
+    
+}
+
+.logo-menu-mobile {
+    display: flex;
+}
+
+
+#menu {
+    position: absolute;
+    display: block;
+    width: 100%;
+    list-style: none;
+    top: 68px;
+    right: 0px;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    background-color: rgb(15, 15, 15);
+}
+
+#nav.active #menu {
+    position: absolute;
+    height: calc(80vh - 68px);
+    visibility: visible;
+    overflow-y: auto;
+    background: rgba(34, 34, 34, 0.97);
+    color: black;
+
+}
+
+#menu a {
+    display: block;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(241, 241, 241, 0.05);
+  }
+
+#btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+#hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    color: #fff;
+}
+
+#hamburger::after,
+#hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+#nav.active #hamburger {
+    border-top-color: transparent;
+}
+
+#nav.active #hamburger::before {
+    transform: rotate(135deg);
+}
+
+#nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+.search-top{
+    width: 100%;
+    padding: 7px;
+}
+.search-top input{
+    margin-left: 7px;
+    width: 70%;
+    height: 30px;
+}
+.search-top button{
+    width:  90px;
+    height: 30px;
+}
+
+
+
+.btn-top{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.btn-top button{
+    width: 92px;
+    height: 40px;
+}
+
+
+/* ==================================== Slider Produtos ============================================= */
+
+
+.thumbSection {
+    padding-top: 3%;
+    color: #fff;
+}
+
+.thumbTitle {
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 600;
+    margin: 0 4% 12px;
+}
+
+.thumbTiles.swiper-container {
+    padding: 0 4%;
+}
+
+.thumbTile {
+    width: 50%;
+}
+
+.thumbTile__image {
+    width: 100%;
+    border-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev,
+.thumbTiles .swiper-button-next {
+    position: relative;
+    height: 100px;
+    width: 20px;
+    margin: 0;
+    background-color: rgba(20, 20, 20, 0.5);
+    top: -100px;
+}
+
+.thumbTiles .swiper-button-prev {
+   margin-left: -7%;
+    margin-top: -23.5%;
+    float: left;
+    border-top-right-radius: var(--tileBorderRadius);
+    border-bottom-right-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-next {
+    margin-right: -7%;
+    margin-top: -23.5%;
+    float:right;
+    border-top-left-radius: var(--tileBorderRadius);
+    border-bottom-left-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev::after,
+.thumbTiles .swiper-button-next::after {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: transform 0.1s ease-out;
+}
+/*
+.thumbTiles .swiper-button-prev::after,
+.thumbTiles .swiper-button-next::after {
+    display: none;
+    font-size: 2.4vw;
+}
+
+.thumbTiles .swiper-button-prev:hover::after,
+.thumbTiles .swiper-button-next:hover::after {
+    transform: scale(1.25);
+}
+
+.thumbTiles:hover .swiper-button-prev::after,
+.thumbTiles:hover .swiper-button-next::after {
+    display: block;
+}*/
+
+.box-filmes h5{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12pt;
+}
+
+
+.box-filmes p{
+    margin-top: 0px;
+    font-size: 10pt;
+}
+
+
+.footer-main{
+    background-color: rgba(29, 29, 29, 0.4);
+    width: 100%;
+    height: 300px;
+}
+
+.container-footer{
+    max-width: 95%;
+    display: flex;
+    justify-content: space-around;    
+    flex-wrap: wrap;
+    padding: 5px;
+    color: #fff;
+}
+
+.container-footer img{
+    width: 150px;
+    margin: center;
+}
+.footer-col{
+    width: 300px;
+    
+}
+
+.footer-col p{
+    font-size: 10pt;
+}
+
+.footer-social{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-social img{
+
+    width: 20px;
+    height: 20px;
+    margin: 7px;
+}
+
+
+.menu-footer{
+    margin-top: 15px;
+    list-style: none;
+
+}
+
+.menu-footer ul{
+    padding: 7px;
+}
+
+.menu-footer li{
+    line-height: 22pt;
+    text-align: left;
+}
+
+.formas-pagamento{
+
+    margin-top: 15px;
+}
+.formas-pagamento img{
+    width: 40px;
+    height: 40px;
+}
+
+.formas-icons{
+    margin-top: -50px;
+}
+/* Maiores que celular vertical */
+/*====================== MEDIAQUERY 880px ==========================*/
+
+@media (min-width: 880px) {
+
+    #header{
+        height: 110px;
+    }
+ 
+
+   .container-top{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background-color: rgba(7, 7, 15, 0.7);
+   }
+
+
+    #menu {
+        margin-top: 7px;
+        display: flex;
+        gap: 0.5rem;
+        height: auto;
+        visibility: visible;
+        background-color: rgba(7, 7, 8, 0.7);
+        box-shadow: 100px 10px 20px #020202;
+    }
+
+    
+
+    #btn-mobile {
+        display: none;
+    }
+
+    .search-top{
+        width: 350px; 
+    }
+
+
+    .btn-top{
+        position: relative;
+    }
+
+    #menu a{
+        
+        border-bottom: 0px;
+    }
+
+    .banner-top iframe{
+        width: 98%;
+        height: 450px;
+    }
+
+/* ==================================== Slider Produtos ============================================= */
+
+
+.thumbTiles .swiper-button-prev {
+    display: none;
+    margin-left:-100px;
+    margin-top:-125px;
+    width: 120px;
+    height: 140px;
+    float: left;
+    border-top-right-radius: var(--tileBorderRadius);
+    border-bottom-right-radius: var(--tileBorderRadius);
+ }
+ 
+ .thumbTiles .swiper-button-next {
+    display: none;
+    margin-right:-100px;
+    margin-top:-125px;
+    width: 120px;
+    height: 140px;
+     float:right;
+     border-top-left-radius: var(--tileBorderRadius);
+     border-bottom-left-radius: var(--tileBorderRadius);
+ }
+
+ #container{
+    background: rgba(22, 22, 22, 0.3) ;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
+    url('../img/thumb-1920-1108220.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+    
+    
+}
+
+}
+
+
+
+
+/*        MEDIAQUERY 1100px                     */
+
+@media (min-width: 1100px) {
+
+
+   
+
+    .banner-top img{
+        width: 60%;
+        background-position: center;
+    }
+
+    .banner-top iframe{
+        width: 720px;
+        height: 405px;
+    }
+
+
+}
