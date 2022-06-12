@@ -349,6 +349,7 @@ header img {
 .formas-icons{
     margin-top: -50px;
 }
+/* Maiores que celular vertical */
 /*====================== MEDIAQUERY 880px ==========================*/
 
 @media (min-width: 880px) {
