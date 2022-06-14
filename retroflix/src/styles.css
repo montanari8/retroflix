@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://unpkg.com/swiper/css/swiper.min.css');
 :root{
     --tileBorderRadius: 4px;
 }
@@ -24,8 +25,7 @@ a {
 
 #container{
     background: rgba(22, 22, 22, 0.3) ;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
-    url('../img/thumb-1920-1108220.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),url('/assets/img/thumb-1920-1108220.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: 180%;
@@ -351,8 +351,12 @@ header img {
 .formas-icons{
     margin-top: -50px;
 }
+
+
 /* Maiores que celular vertical */
 /*====================== MEDIAQUERY 880px ==========================*/
+
+
 
 @media (min-width: 880px) {
 
@@ -432,7 +436,7 @@ header img {
  #container{
     background: rgba(22, 22, 22, 0.3) ;
     background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
-    url('../img/thumb-1920-1108220.jpg');
+    url('assets/img/thumb-1920-1108220.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
