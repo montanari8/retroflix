@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { PrateleirasIniciaisComponent } from './components/prateleiras-iniciais/prateleiras-iniciais.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponentComponent,
     FooterComponentComponent,
-    PrateleirasIniciaisComponent
+    PrateleirasIniciaisComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
