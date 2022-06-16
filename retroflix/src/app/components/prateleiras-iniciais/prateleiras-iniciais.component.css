@@ -7,6 +7,18 @@
     background-size: 180%;
     overflow-x: hidden;
 
+
+}
+
+.prateleiras{
+    max-width: 1080px;
+    margin: auto;
+    padding: 7px;
+}
+
+.prateleiras .slide{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
