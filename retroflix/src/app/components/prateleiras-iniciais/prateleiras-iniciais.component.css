@@ -1,0 +1,28 @@
+#container{
+    background: rgba(22, 22, 22, 0.3) ;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
+    url('../../../assets/img/thumb-1920-1108220.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 180%;
+    overflow-x: hidden;
+
+}
+
+
+
+@media (min-width: 880px) {
+
+
+    #container{
+        background: rgba(22, 22, 22, 0.3) ;
+        background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9)),
+        url('../../../assets/img/thumb-1920-1108220.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        overflow-x: hidden;
+        
+        
+    }
+}

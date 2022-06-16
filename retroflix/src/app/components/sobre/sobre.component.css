@@ -1,0 +1,15 @@
+.sobre{
+    margin: 7px;
+    width: 90%;
+}
+
+
+@media (min-width: 880px) {
+   
+    .sobre{
+        margin: auto;
+        max-width: 890px;
+        width: 90%;
+    }
+
+}
