@@ -3,6 +3,15 @@
     width: 90%;
 }
 
+.sobre-itens{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sobre-itens div{
+    width: 250px    ;
+}
 
 @media (min-width: 880px) {
    
