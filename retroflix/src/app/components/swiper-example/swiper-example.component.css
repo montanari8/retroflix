@@ -31,7 +31,3 @@
   object-fit: cover;
 }
 
-.swiper-pagination-bullet-active{
-  display: none;
-  background: rgb(78, 27, 27);
-}

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
 import { SwiperModule } from "swiper/angular";
@@ -17,6 +19,7 @@ import { FooterComponentComponent } from './components/footer-component/footer-c
 import { PrateleirasIniciaisComponent } from './components/prateleiras-iniciais/prateleiras-iniciais.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { SwiperExampleComponent } from './components/swiper-example/swiper-example.component';
+import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { SwiperExampleComponent } from './components/swiper-example/swiper-examp
     FooterComponentComponent,
     PrateleirasIniciaisComponent,
     SobreComponent,
-    SwiperExampleComponent
+    SwiperExampleComponent,
+    ListProdutosComponent
   ],
   imports: [
     BrowserModule,
