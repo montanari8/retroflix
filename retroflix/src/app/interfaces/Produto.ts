@@ -1,5 +1,5 @@
 export interface Produto{
-    img: string,
+    enderecoImagem: string,
     titulo: string,
     subtitulo: string
 }
