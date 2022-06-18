@@ -1,0 +1,59 @@
+<section class="section-default">
+    <h1>
+        Formulário de Cadastro
+    </h1>
+    <div class="formulario-default">
+        <form action="">
+            <div class="campos-formulario">
+                <label for="Título do Filme">Título do Filme</label>
+                <input type="text" name="nome-produto" id="Título do Filme">
+                <div class="itens-inputs">
+                    <label for="lancamento">Lançamento</label>
+                    <input name="lancamento" id="lancamento" type="number" min="1900" max="2099" step="1" value="2022" />
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria"></select>
+                    <label for="duracao">Duração</label>
+                    <input name="duracao" type="time" id="duracao" name="appt" min="09:00" max="18:00" required>
+                </div>   
+                <div class="itens-inputs">
+                    <label for="diretor">Direção</label>
+                    <input type="text" name="diretor" id="diretor">
+                    <label for="elenco">Elenco</label>
+                    <input type="text" name="elenco" id="elenco">
+                </div>
+                <label for="sinpose">Sinopse</label>
+                <textarea name="sinpose" id="sinpose" cols="30" rows="10"></textarea>
+                <div class="itens-inputs">
+                    <label for="altura">Altura</label>
+                    <input type="number" name="altura" id="altura">
+                    <label for="largura">Largura</label>
+                    <input type="number" name="largura" id="largura">
+                    <label for="peso">Peso</label>
+                    <input type="number" name="peso" id="peso">
+                </div>
+                <label for="fornecedor">Fornecedor</label>
+                <input type="text" name="fornecedor" id="fornecedor">
+                <label for="cnpj-fornecedor">CNPJ</label>
+                <input type="text" name="cnpj-fornecedor" id="cnpj-fornecedor">
+                <div class="itens-inputs">
+                    <label for="custo">Custo</label>
+                    <input type="number" name="custo" id="custo">
+                    <label for="valor">Valor</label>
+                    <input type="number" name="valor" id="valor">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" name="quantidade" id="quantidade">
+                </div>
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                <label for="url-imag">Endereço Imagem</label>
+                <input type="text" name="url-imag" id="url-imag">
+
+                <button>Enviar</button>
+
+            </div>
+
+
+        </form>
+    </div>
+
+</section>

@@ -184,7 +184,7 @@ header img {
 
 .section-default{
     color: #fff;
-    height: 70vh;
+    min-height: 70vh;
 }
 .div-default{
     padding: 7px;
@@ -491,6 +491,12 @@ header img {
         width: 176px;
         height: 238px;
     }
-
+    .section-default{
+        margin: auto;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        max-width: 890px;
+        width: 90%;
+    }
 
 }

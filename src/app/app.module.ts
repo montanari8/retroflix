@@ -20,6 +20,7 @@ import { PrateleirasIniciaisComponent } from './components/prateleiras-iniciais/
 import { SobreComponent } from './components/sobre/sobre.component';
 import { SwiperExampleComponent } from './components/swiper-example/swiper-example.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
+import { FormularioCadastroProdutosComponent } from './components/formulario-cadastro-produtos/formulario-cadastro-produtos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ListProdutosComponent } from './components/list-produtos/list-produtos.
     PrateleirasIniciaisComponent,
     SobreComponent,
     SwiperExampleComponent,
-    ListProdutosComponent
+    ListProdutosComponent,
+    FormularioCadastroProdutosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+
+h1{
+    margin: auto;
+    margin-bottom: 7px;
+    text-align: center;
+}
+.formulario-default{
+    max-width: 500px;
+    margin: auto;
+}
+.campos-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.itens-inputs{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#altura, #largura, #peso, #lancamento, #duracao, #quantidade{
+    width: 60px;
+}
+
+#custo, #valor{
+    width: 90px;
+}
+
+#diretor, #elenco, #cnpj-fornecedor{
+    width: 160px;
+}
+
+button{
+    margin-top: 15px;
+    width: 180px;
+    height: 50px;
+}
+
+
+#categoria{
+    width: 120px;
+}
