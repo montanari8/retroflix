@@ -252,7 +252,11 @@ header img {
     font-weight: bold;
     transition: transform 0.1s ease-out;
 }
-
+.swiper-pagination-bullet{
+    background: #fff;
+    opacity: 0.8;
+    box-shadow: 0 0 1em rgb(0, 0, 0);
+}
 .swiper-pagination .swiper-pagination-bullet-active{
     background: #4e0a0a;
     width: 9px;
@@ -281,13 +285,15 @@ header img {
     box-shadow: 4px 8px 8px rgb(36, 36, 36);
     transition: 400ms;
 }
+
 .box-filmes:hover{
-    height: 400px;
+    height: 319px;
     width: 185px;
     z-index: 10;
     box-shadow: 4px 8px 8px rgb(0, 0, 0);
     cursor: pointer;
 }
+
 .box-filmes h5{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -296,11 +302,14 @@ header img {
     
 }
 
-
+.box-filmes h5:hover, .box-filmes p:hover{
+    display: none;
+}
 .box-filmes p{
     margin-top: 0px;
     font-size: 10pt;
 }
+
 
 
 .footer-main{
@@ -476,6 +485,11 @@ header img {
     .banner-top iframe{
         width: 720px;
         height: 405px;
+    }
+    
+    .box-filmes .img-produto{
+        width: 176px;
+        height: 238px;
     }
 
 
