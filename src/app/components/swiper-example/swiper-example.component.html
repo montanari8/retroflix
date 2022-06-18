@@ -1,0 +1,34 @@
+<swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [pagination]="{
+      clickable: true
+    }"
+    [breakpoints]="{
+      '640': {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      '768': {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+      '1024': {
+        slidesPerView: 5,
+        spaceBetween: 50
+      }
+    }"
+    class="mySwiper"
+  >
+    <ng-template swiperSlide *ngFor="let produto of produtos">
+      <div class="swiper-slide">
+        <div  class="box-filmes">
+            <a class="thumbTile" href="#"></a>
+            <img src="{{produto.enderecoImagem}}" alt="">
+            <h5>{{produto.titulo | titlecase}}</h5>
+            <p>{{produto.subtitulo | titlecase}}</p>
+            <p>★☆...</p>
+        </div>
+    </div>
+    </ng-template>
+  </swiper>
