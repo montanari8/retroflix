@@ -14,6 +14,12 @@
                 <div *ngIf="titulo.invalid && formDir.submitted" class="erroForm">
                     <p *ngIf="titulo.errors?.['required']">O título é obrigatório!</p>
                 </div>
+                <label for="Subtítulo do Filme">Subtítulo do Filme</label>
+                <input 
+                type="text" 
+                id="subtitulo"
+                formControlName="subtitulo"
+                required>
                 <div class="itens-inputs">
                     <label for="lancamento">Lançamento</label>
                     <input name="lancamento" id="lancamento" type="number" min="1900" max="2099" step="1" value="2022" />

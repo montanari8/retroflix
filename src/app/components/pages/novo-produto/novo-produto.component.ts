@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormularioCadastroProdutosComponent } from '../../formulario-cadastro-produtos/formulario-cadastro-produtos.component';
 import { ListProdutosService } from 'src/app/services/list-produtos.service';
+import { Produto } from 'src/app/interfaces/Produto';
 
 @Component({
   selector: 'app-novo-produto',
@@ -22,8 +23,24 @@ export class NovoProdutoComponent implements OnInit {
   ngOnInit(): void {}
 
   
-  createHandler( event: any){
-    console.log('deu boa')
+  async createHandler( produto: Produto){
+
+
+    console.log('creteHandler')
+
+    const formData = new FormData
+
+    formData.append("titulo", produto.titulo)
+    formData.append("subtitulo", produto.subtitulo)
+    /*
+    if (produto.enderecoImagem){      
+      formData.append('imagem', produto.enderecoImagem)
+    }
+
+    */
+
+    await this.listProdutoService.createProduto(formData).subscribe()
+
   }
   
   

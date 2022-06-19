@@ -41,6 +41,7 @@ export class FormularioCadastroProdutosComponent implements OnInit {
 
     this.produtoForm = new FormGroup({
       titulo: new FormControl('',[Validators.required]),
+      subtitulo: new FormControl(''),
       image: new FormControl('')
     })
 
