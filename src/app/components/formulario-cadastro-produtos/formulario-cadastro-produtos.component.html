@@ -3,15 +3,27 @@
         Formulário de Cadastro
     </h1>
     <div class="formulario-default">
-        <form action="">
+        <form (ngSubmit)="submit_produto()" [formGroup]="produtoForm" #formDir="ngForm">
             <div class="campos-formulario">
                 <label for="Título do Filme">Título do Filme</label>
-                <input type="text" name="nome-produto" id="Título do Filme">
+                <input 
+                type="text" 
+                id="titulo"
+                formControlName="titulo"
+                required>
+                <div *ngIf="titulo.invalid && formDir.submitted" class="erroForm">
+                    <p *ngIf="titulo.errors?.['required']">O título é obrigatório!</p>
+                </div>
                 <div class="itens-inputs">
                     <label for="lancamento">Lançamento</label>
                     <input name="lancamento" id="lancamento" type="number" min="1900" max="2099" step="1" value="2022" />
                     <label for="categoria">Categoria</label>
-                    <select name="categoria" id="categoria"></select>
+                    
+                    <select multiple [(ngModel)]="categoriasFilmes" name="categoria" id="categoria">
+                        <option *ngFor="let categoria of categoriasFilmes" [ngValue]="categoria">
+                          {{categoria.name}}
+                        </option>
+                    </select>
                     <label for="duracao">Duração</label>
                     <input name="duracao" type="time" id="duracao" name="appt" min="09:00" max="18:00" required>
                 </div>   
@@ -44,11 +56,11 @@
                     <input type="number" name="quantidade" id="quantidade">
                 </div>
                 <label for="descricao">Descrição</label>
-                <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
                 <label for="url-imag">Endereço Imagem</label>
                 <input type="text" name="url-imag" id="url-imag">
 
-                <button>Enviar</button>
+                <input type="submit" id="button" value="Enviar">
 
             </div>
 
