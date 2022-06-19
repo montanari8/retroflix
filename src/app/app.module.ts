@@ -21,6 +21,7 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { SwiperExampleComponent } from './components/swiper-example/swiper-example.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
 import { FormularioCadastroProdutosComponent } from './components/formulario-cadastro-produtos/formulario-cadastro-produtos.component';
+import { NovoProdutoComponent } from './components/pages/novo-produto/novo-produto.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormularioCadastroProdutosComponent } from './components/formulario-cad
     SobreComponent,
     SwiperExampleComponent,
     ListProdutosComponent,
-    FormularioCadastroProdutosComponent
+    FormularioCadastroProdutosComponent,
+    NovoProdutoComponent
   ],
   imports: [
     BrowserModule,

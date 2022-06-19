@@ -58,9 +58,9 @@
                 <label for="descricao">Descrição</label>
                 <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
                 <label for="url-imag">Endereço Imagem</label>
-                <input type="text" name="url-imag" id="url-imag">
+                <input type="file" name="url-imag" id="url-imag" (change)="onFileSelected($event)">
 
-                <input type="submit" id="button" value="Enviar">
+                <input type="submit" value="{{ btnText }}" />
 
             </div>
 

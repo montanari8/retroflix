@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import {CategoriasProdutos} from 'src/app/interfaces/CategoriasProdutos';
+import { Produto } from 'src/app/interfaces/Produto';
 
 @Component({
   selector: 'app-formulario-cadastro-produtos',
@@ -8,6 +9,9 @@ import {CategoriasProdutos} from 'src/app/interfaces/CategoriasProdutos';
   styleUrls: ['./formulario-cadastro-produtos.component.css']
 })
 export class FormularioCadastroProdutosComponent implements OnInit {
+  @Output() onSubmit = new EventEmitter<Produto>();
+  @Input() produtoData: Produto | null = null;
+  @Input() btnText!: string;
 
   produtoForm!: FormGroup;
 
@@ -36,7 +40,8 @@ export class FormularioCadastroProdutosComponent implements OnInit {
   ngOnInit(): void {
 
     this.produtoForm = new FormGroup({
-      titulo: new FormControl('',[Validators.required])
+      titulo: new FormControl('',[Validators.required]),
+      image: new FormControl('')
     })
 
   }
@@ -45,13 +50,22 @@ export class FormularioCadastroProdutosComponent implements OnInit {
     return this.produtoForm.get('titulo')!
   }
 
+  onFileSelected(event: any){
+
+    const file: File = event.target.files[0]
+
+    this.produtoForm.patchValue({image: file})
+
+  }
+
   submit_produto(){
     if(!this.produtoForm.invalid){     /* Não enviar até que todos os campos estejam preenchidos*/ 
       console.log("envia formulário produto!")
+      console.log(this.produtoForm.value)
+      this.onSubmit.emit(this.produtoForm.value)
     }
   }
 
-  
 
 
 }
