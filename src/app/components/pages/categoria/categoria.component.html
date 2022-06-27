@@ -1,0 +1,16 @@
+<section class="section-default">
+    <div class="div-default">
+        <div class="container">
+            <h1></h1>
+            <ul class="categoria">
+                <li *ngFor="let produto of produtos">
+                    <div>
+                        <img src="{{produto.enderecoImagem}}" alt="">
+                        <h2>{{produto.titulo}}</h2>
+                        <p>{{produto.subtitulo}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

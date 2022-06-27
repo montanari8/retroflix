@@ -15,18 +15,7 @@ export class ListProdutosService {
   private endPointCreateProdutos = `${this.baseapiUrl}produtos` /* Método POST */
 
 
-  private produtos : Produto[] = [
-
-    {enderecoImagem: "thumb-1920-739988.jpg", titulo: "The Karate Kid", subtitulo: "A Hora da Verdade"},
-    {enderecoImagem: "thumb-1920-617213.jpg", titulo: "Titanic", subtitulo: "RMS Titanic"},
-
-  ]
-
-  private produtoDelete = [
-
-    {"id": "62af730998b61b3fce7bd11f"}
-
-  ]
+  private produtos : Produto[] = []
 
   private headers = new HttpHeaders()
   .set('content-type','application/json')
@@ -52,14 +41,32 @@ export class ListProdutosService {
       "content-type" : "application/json"
     }
 
-    const body =  [
+    const body =  
 
-      {enderecoImagem: "thumb-1920-739988.jpg", titulo: "The Karate Kid", subtitulo: "A Hora da Verdade"},
-      {enderecoImagem: "thumb-1920-617213.jpg", titulo: "Titanic", subtitulo: "RMS Titanic"}
+      {
+        "id" : null,
+        "titulo" : "The Karate Kid", 
+        "subtitulo": "A Hora da Verdade",
+        "descricao": null,
+        "enderecoImagem": "https://br.web.img3.acsta.net/c_310_420/pictures/210/195/21019546_20130715144612222.jpg",
+        "valor": "valor",
+        "quantidade": "quantidade",
+        "produtora": "produtora",
+        "distribuidora": "PAM filmes",
+        "tradutora": "tradutora",
+        "fornecedor": "fornecedor",
+        "direcao": "Milton Amaral",
+        "producao": null,
+        "elenco": "Amácio Mazzaropi, Geny Prado, Ana Maria Nabuco",
+        "dataLancamento": "1959",
+        "critica": null,
+        "sinopse": "Zacarias (Mazzaropi) e a mulher vão à cidade para ajudar o filho que quer ser médico. Lá ele resolve trabalhar como chofer de táxi.",
+        "trailer": "https://www.youtube.com/watch?v=GCMXbY8A8Yw"
+      }
   
-    ]
     
-    return this.http.post<FormData>('https://retroflix.herokuapp.com/produtos',body,{headers})
+    
+    return this.http.post<any>('https://retroflix.herokuapp.com/produtos',body)
    }
 
 

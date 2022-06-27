@@ -51,4 +51,6 @@ produtos : Produto[] = [];
     this.listProdutosService.getAll().subscribe((produto) => (this.produtos = produto));
     console.log(this.listProdutosService.getAll().subscribe((produto) => (this.produtos = produto)));
   }
+
+  
 }

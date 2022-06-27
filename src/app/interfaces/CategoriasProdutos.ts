@@ -1,4 +1,5 @@
 export interface CategoriasProdutos{
     id:string,
-    name:string
+    name:string,
+    link?: string
 }
