@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { SwiperComponent } from "swiper/angular";
 import SwiperCore, { Pagination } from "swiper";
-import {Produto} from 'src/app/interfaces/Produto';
+import {dimensoes, Produto} from 'src/app/interfaces/Produto';
 import { ListProdutosService } from 'src/app/services/list-produtos.service';
 
 SwiperCore.use([Pagination]);
@@ -35,6 +35,7 @@ export class SwiperExampleComponent implements OnInit {
   ]
 */
 produtos : Produto[] = [];
+dimensoes : dimensoes [] = [];
 
   constructor(private listProdutosService: ListProdutosService) { 
 

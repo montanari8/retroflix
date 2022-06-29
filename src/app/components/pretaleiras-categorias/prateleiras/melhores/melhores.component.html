@@ -23,11 +23,11 @@
   >
     <ng-template swiperSlide *ngFor="let produto of produtos">
       <div class="swiper-slide">         
-            <a class="thumbTile" href="#">
+            <a class="thumbTile" routerLink="/produto/1">
               <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
             </a>                   
-            <h5>{{produto.titulo | titlecase}}</h5>
-            <p>{{produto.subtitulo | titlecase}}</p>
+            <h5>{{ produto.titulo | titlecase}}</h5>
+            <p>{{ produto.subtitulo | titlecase}}</p>
             <p>★☆...</p>      
         </div>
     </ng-template>

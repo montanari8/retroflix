@@ -1,1 +1,83 @@
-<p>produto works!</p>
+<section class="section-default">
+    <div class="div-default" *ngFor="let produto of produto">
+        <div *ngIf="id === produto.id">
+            <div class="container">
+                <div class="imagem">
+                    <img src="{{produto.enderecoImagem}}" alt="">
+                </div>
+                <div class="info-produto">
+                    <div class="titulo">
+                        <h1>{{produto.titulo}}</h1>
+                        <h2>{{produto.subtitulo}}</h2>
+                        <p>cod. produto: {{produto.id}}</p>
+                    </div>
+                    <div class="preco">
+                        <p>{{produto.valorVenda | currency}}</p>
+                        <button>COMPRAR</button>
+                    </div>
+                  
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div>
+                    <h2>{{  produto.titulo  }}</h2>
+                    <div class="detalhes-produto">
+                            <p>Subtitulo:</p>
+                            <p> {{ produto.subtitulo }}</p>
+                            <p>Lançamento:</p>
+                            <p> {{ produto.dataLancamento }}</p>
+                            <p>Duração:</p>
+                            <p> {{ produto.duracao }}</p>
+                            <p>Categoria:</p>
+                            <p id="categoria"> {{ produto.categoria }}</p>
+                            <p>Elenco:</p>
+                            <p> {{ produto.elenco }}</p>
+                            <p>Direção:</p>
+                            <p> {{ produto.direcao }}</p>
+                            <p>Trailer:</p>
+                            <p> <a href="{{produto.trailer}}" target="_blank">{{produto.trailer}}</a></p>
+                            <p>Sinopse:</p>
+                            <p> {{ produto.sinopse }}</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <h2>Outros Filmes</h2>
+    <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [pagination]="{
+      clickable: true
+    }"
+    [breakpoints]="{
+      '640': {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      '768': {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+      '1024': {
+        slidesPerView: 5,
+        spaceBetween: 50
+      }
+    }"
+    class="mySwiper"
+  >
+    <ng-template swiperSlide *ngFor="let produto of produto">
+      <div class="swiper-slide" *ngIf="produto.categoria === categoria">         
+            <a class="thumbTile" routerLink="/produto/1">
+              <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
+            </a>                   
+            <h5>{{ produto.titulo | titlecase}}</h5>
+            <p>{{ produto.subtitulo | titlecase}}</p>
+            <p>★☆...</p>      
+        </div>
+    </ng-template>
+  </swiper>
+</section>

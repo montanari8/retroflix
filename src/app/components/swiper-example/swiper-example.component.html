@@ -24,13 +24,17 @@
       <div class="swiper-slide">
         <div  class="box-filmes">
           <div class="img-produto">
-            <a class="thumbTile" href="#">
+            <a class="thumbTile" routerLink="/produto/{{produto.id}}">
               <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
             </a>
           </div>
           <div class="texto">            
             <h5>{{produto.titulo | titlecase}}</h5>
             <p>{{produto.subtitulo | titlecase}}</p>
+            <p>{{produto.valorVenda | currency }}</p>
+            <p *ngFor="let dimensao  of produto.dimensoes ">
+              {{ dimensao }}
+            </p>
             <p>★☆...</p>
           </div>          
         </div>

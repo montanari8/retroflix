@@ -7,6 +7,7 @@ import { PrateleirasIniciaisComponent } from '../components/prateleiras-iniciais
 import { SobreComponent } from '../components/sobre/sobre.component';
 import { CategoriasComponent } from '../components/pages/categorias/categorias.component'; // Página Categoria
 import { CategoriaComponent } from '../components/pages/categoria/categoria.component';
+import { ProdutoComponent } from '../components/pages/produto/produto.component';
 
 const routes: Routes = [
   /* Menu Componente Header */
@@ -20,6 +21,9 @@ const routes: Routes = [
 
   /* Componentes Link Categoria */
   {path: 'the-best', component: CategoriaComponent},
+
+  /* Página Produto */
+  {path: 'produto/:id', component: ProdutoComponent},
 ];
 
 @NgModule({

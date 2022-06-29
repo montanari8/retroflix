@@ -30,8 +30,8 @@ export class NovoProdutoComponent implements OnInit {
 
     const formData = new FormData
 
-    formData.append("titulo", produto.titulo)
-    formData.append("subtitulo", produto.subtitulo)
+   // formData.append("titulo", produto.titulo)
+    //formData.append("subtitulo", produto.subtitulo)
     /*
     if (produto.enderecoImagem){      
       formData.append('imagem', produto.enderecoImagem)

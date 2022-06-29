@@ -69,5 +69,11 @@ export class ListProdutosService {
     return this.http.post<any>('https://retroflix.herokuapp.com/produtos',body)
    }
 
+   getItem(id: string): Observable<Produto>{
+
+      return this.http.get<Produto>('https://retroflix.herokuapp.com/produtos/id/'+id)
+    
+   }
+
 
 }
