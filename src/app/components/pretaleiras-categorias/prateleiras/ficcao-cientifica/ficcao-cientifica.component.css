@@ -1,0 +1,18 @@
+/*        MEDIAQUERY 1100px                     */
+
+@media (min-width: 1100px) {
+    .swiper-slide img {
+        width: 140px;
+        height: 197px;
+    }
+
+    .swiper-slide h5 {
+        font-size: 1em;
+        margin: 0px;
+    }
+
+    .swiper-slide p {
+        font-size: 0.8em;
+        margin-top: 0px;
+    }
+}

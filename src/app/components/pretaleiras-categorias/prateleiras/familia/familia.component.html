@@ -1,1 +1,33 @@
-<p>familia works!</p>
+<swiper
+[slidesPerView]="1"
+[spaceBetween]="10"
+[pagination]="{
+  clickable: true
+}"
+[breakpoints]="{
+  '640': {
+    slidesPerView: 2,
+    spaceBetween: 20
+  },
+  '768': {
+    slidesPerView: 4,
+    spaceBetween: 40
+  },
+  '1024': {
+    slidesPerView: 5,
+    spaceBetween: 50
+  }
+}"
+class="mySwiper"
+>
+<ng-template swiperSlide *ngFor="let produto of produto">
+  <div class="swiper-slide">         
+        <a class="thumbTile" routerLink="/produto/1">
+          <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
+        </a>                   
+        <h5>{{ produto.titulo | titlecase}}</h5>
+        <p>{{ produto.subtitulo | titlecase}}</p>
+        <p>★☆...</p>      
+    </div>
+</ng-template>
+</swiper>
