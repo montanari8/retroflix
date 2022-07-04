@@ -69,8 +69,8 @@
     }"
     class="mySwiper"
   >
-    <ng-template swiperSlide *ngFor="let produto of produto">
-      <div class="swiper-slide" *ngIf="produto.categoria === categoria">         
+    <ng-template swiperSlide *ngFor="let produto of produto" >
+      <div class="swiper-slide" >         
             <a class="thumbTile" routerLink="/produto/1">
               <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
             </a>                   
