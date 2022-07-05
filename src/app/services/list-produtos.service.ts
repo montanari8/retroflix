@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ListProdutosService {
 
-  private baseapiUrl = environment.baseapiUrl; /* URL API */
+  private baseapiUrl = 'https://retroflix.herokuapp.com/'; /* URL API */
   private endPointReqProdutos = `${this.baseapiUrl}produtos` /* Método GET */
   private endPointCreateProdutos = `${this.baseapiUrl}produtos` /* Método POST */
 
