@@ -75,5 +75,11 @@ export class ListProdutosService {
     
    }
 
+   getCategoria(categoria : string): Observable<Produto[]>{
+
+    return this.http.get<Produto[]>(this.endPointReqProdutos+'/'+categoria);
+
+  }
+
 
 }

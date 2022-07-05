@@ -22,6 +22,6 @@ export class PolicialComponent implements OnInit {
   }
   
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Policial').subscribe((produto) => (this.produto = produto)); 
   }
 }

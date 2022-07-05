@@ -22,6 +22,6 @@ export class FamiliaComponent implements OnInit {
   }
 
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Família').subscribe((produto) => (this.produto = produto)); 
   }
 }

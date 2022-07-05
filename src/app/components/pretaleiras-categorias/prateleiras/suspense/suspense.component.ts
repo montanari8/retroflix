@@ -22,6 +22,6 @@ export class SuspenseComponent implements OnInit {
   }
   
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Suspense').subscribe((produto) => (this.produto = produto)); 
   }
 }

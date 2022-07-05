@@ -22,6 +22,9 @@ export class MusicalComponent implements OnInit {
   }
 
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Musical').subscribe((produto) => (this.produto = produto)); 
   }
+
+
+
 }

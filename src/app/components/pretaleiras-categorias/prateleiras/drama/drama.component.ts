@@ -22,6 +22,6 @@ export class DramaComponent implements OnInit {
   }
 
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Drama').subscribe((produto) => (this.produto = produto)); 
   }
 }

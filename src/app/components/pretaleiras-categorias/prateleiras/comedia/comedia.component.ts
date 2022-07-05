@@ -22,6 +22,6 @@ export class ComediaComponent implements OnInit {
   }
 
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Comédia').subscribe((produto) => (this.produto = produto)); 
   }
 }

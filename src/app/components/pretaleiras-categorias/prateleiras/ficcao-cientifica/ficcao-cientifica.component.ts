@@ -22,6 +22,8 @@ export class FiccaoCientificaComponent implements OnInit {
   }
 
   getProduto(){      
-    return this.listService.getAll().subscribe((produto) => (this.produto = produto)); 
+    return this.listService.getCategoria('Ficção Cientifica').subscribe((produto) => (this.produto = produto)); 
   }
+
+  
 }
