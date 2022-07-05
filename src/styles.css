@@ -253,8 +253,9 @@ header img {
     transition: transform 0.1s ease-out;
 }
 .swiper-pagination-bullet{
+    margin-top: 50px;
     background: #fff;
-    opacity: 0.8;
+    opacity: 0.5;
     box-shadow: 0 0 1em rgb(0, 0, 0);
 }
 .swiper-pagination .swiper-pagination-bullet-active{
@@ -443,6 +444,10 @@ header img {
         height: 450px;
     }
 
+    .swiper-slide{
+        color: #fff;
+    }
+
 /* ==================================== Slider Produtos ============================================= */
 
 
@@ -483,7 +488,9 @@ header img {
         margin-left: 90px;
     }
 
-   
+   .mySwiper{ /* Altura das Prateleiras */
+    height: 340px;
+   }
 
     .banner-top img{
         width: 60%;

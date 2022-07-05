@@ -2,12 +2,14 @@
 <swiper
     [slidesPerView]="1"
     [spaceBetween]="10"
+    [loop]="true"
+    [autoplay]="true"
     [pagination]="{
       clickable: true
     }"
     [breakpoints]="{
       '640': {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20
       },
       '768': {
@@ -23,7 +25,7 @@
   >
     <ng-template swiperSlide *ngFor="let produto of produtos">
       <div class="swiper-slide">         
-            <a class="thumbTile" routerLink="/produto/1">
+            <a class="thumbTile" routerLink="/produto/{{produto.id}}">
               <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
             </a>                   
             <h5>{{ produto.titulo | titlecase}}</h5>
