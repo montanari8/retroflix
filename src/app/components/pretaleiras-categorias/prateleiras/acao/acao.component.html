@@ -1,4 +1,3 @@
-
 <swiper
 [slidesPerView]="1"
 [spaceBetween]="10"
@@ -21,7 +20,7 @@
 }"
 class="mySwiper"
 >
-<ng-template swiperSlide *ngFor="let produto of produtos">
+<ng-template swiperSlide *ngFor="let produto of produto">
   <div class="swiper-slide">         
         <a class="thumbTile" routerLink="/produto/1">
           <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
