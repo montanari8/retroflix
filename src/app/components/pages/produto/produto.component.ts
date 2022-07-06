@@ -50,6 +50,7 @@ export class ProdutoComponent implements OnInit {
       this.listService.getItem(id).subscribe((produto) => (
         this.produto = produto
         ))
+        scrollTo({ top: 0, behavior: 'smooth' })
     }   
    
   }

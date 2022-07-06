@@ -191,94 +191,6 @@ header img {
 }
 
 
-/* ==================================== Slider Produtos ============================================= */
-
-
-.thumbSection {
-    padding-top: 3%;
-    color: #fff;
-}
-
-.thumbTitle {
-    font-size: 16px;
-    line-height: 14px;
-    font-weight: 600;
-    margin: 0 4% 12px;
-}
-
-.thumbTiles.swiper-container {
-    padding: 0 4%;
-}
-
-.thumbTile {
-    width: 50%;
-}
-
-.thumbTile__image {
-    width: 100%;
-    border-radius: var(--tileBorderRadius);
-}
-
-.thumbTiles .swiper-button-prev,
-.thumbTiles .swiper-button-next {
-    position: relative;
-    height: 100px;
-    width: 20px;
-    margin: 0;
-    background-color: rgba(20, 20, 20, 0.5);
-    top: -100px;
-}
-
-.thumbTiles .swiper-button-prev {
-   margin-left: -7%;
-    margin-top: -23.5%;
-    float: left;
-    border-top-right-radius: var(--tileBorderRadius);
-    border-bottom-right-radius: var(--tileBorderRadius);
-}
-
-.thumbTiles .swiper-button-next {
-    margin-right: -7%;
-    margin-top: -23.5%;
-    float:right;
-    border-top-left-radius: var(--tileBorderRadius);
-    border-bottom-left-radius: var(--tileBorderRadius);
-}
-
-.thumbTiles .swiper-button-prev::after,
-.thumbTiles .swiper-button-next::after {
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    transition: transform 0.1s ease-out;
-}
-.swiper-pagination-bullet{
-    margin-top: 50px;
-    background: #fff;
-    opacity: 0.5;
-    box-shadow: 0 0 1em rgb(0, 0, 0);
-}
-.swiper-pagination .swiper-pagination-bullet-active{
-    background: #4e0a0a;
-    width: 9px;
-    height: 9px;
-  }
-/*
-.thumbTiles .swiper-button-prev::after,
-.thumbTiles .swiper-button-next::after {
-    display: none;
-    font-size: 2.4vw;
-}
-
-.thumbTiles .swiper-button-prev:hover::after,
-.thumbTiles .swiper-button-next:hover::after {
-    transform: scale(1.25);
-}
-
-.thumbTiles:hover .swiper-button-prev::after,
-.thumbTiles:hover .swiper-button-next::after {
-    display: block;
-}*/
 
 .box-filmes{
     min-height: 250px;
@@ -444,34 +356,7 @@ header img {
         height: 450px;
     }
 
-    .swiper-slide{
-        color: #fff;
-    }
-
-/* ==================================== Slider Produtos ============================================= */
-
-
-.thumbTiles .swiper-button-prev {
-    display: none;
-    margin-left:-100px;
-    margin-top:-125px;
-    width: 120px;
-    height: 140px;
-    float: left;
-    border-top-right-radius: var(--tileBorderRadius);
-    border-bottom-right-radius: var(--tileBorderRadius);
- }
  
- .thumbTiles .swiper-button-next {
-    display: none;
-    margin-right:-100px;
-    margin-top:-125px;
-    width: 120px;
-    height: 140px;
-     float:right;
-     border-top-left-radius: var(--tileBorderRadius);
-     border-bottom-left-radius: var(--tileBorderRadius);
- }
 
  
 
