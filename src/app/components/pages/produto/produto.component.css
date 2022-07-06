@@ -7,20 +7,20 @@
 }
 h1{
     color: #fff;
-    font-size: 4em;
+    font-size: 28pt;
     margin: 0px;
     height: 70px;
 }
 
 h2{
     color: #fff;
-    font-size: 1.5em;
+    font-size: 16pt;
     margin: 0px;
     height: 35px;
 }
 .titulo p{
     color: #fff;
-    font-size: 0.7em;
+    font-size: 10pt;
     margin: 0px;
 }
 
@@ -34,11 +34,26 @@ h2{
     height: 35px;
 }
 
+.botoes{
+    display: flex;
+    align-items: center;
+    
+}
+
+.botoes button{
+    border-radius: 10px;
+}
+
+.compra{
+    background-color: rgb(221, 149, 54);
+    
+}
+
 .preco button{
-    font-size: 2em;
-    width: 60%;
+    font-size: 12pt;
+    width: 150px;
     margin: auto;
-    height: 60px;
+    height: 50px;
 }
 
 .detalhes-produto{
@@ -50,8 +65,14 @@ h2{
     grid-template-columns: auto auto;
 }
 
+.imagem{
+    max-width: 350px;
+    margin: auto;
+}
 
-
+.imagem img{
+    width: 100%;
+}
 
 @media (min-width: 1100px) {
 

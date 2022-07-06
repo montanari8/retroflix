@@ -1,6 +1,6 @@
 <section class="section-default">
-    <div class="div-default" *ngFor="let produto of produto">
-        <div *ngIf="id === produto.id">
+    <div class="div-default" *ngIf="produto">
+        <div >
             <div class="container">
                 <div class="imagem">
                     <img src="{{produto.enderecoImagem}}" alt="">
@@ -13,7 +13,10 @@
                     </div>
                     <div class="preco">
                         <p>{{produto.valorVenda | currency}}</p>
-                        <button>COMPRAR</button>
+                        <div class="botoes">
+                          <button class="compra">COMPRAR</button>
+                          <button>Adicionar ao Carrinhos</button>
+                        </div>
                     </div>
                   
                 </div>
@@ -46,38 +49,66 @@
 
         </div>
     </div>
-    <h2>Outros Filmes</h2>
-    <swiper
-    [slidesPerView]="1"
-    [spaceBetween]="10"
-    [pagination]="{
-      clickable: true
-    }"
-    [breakpoints]="{
-      '640': {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      '768': {
-        slidesPerView: 4,
-        spaceBetween: 40
-      },
-      '1024': {
-        slidesPerView: 5,
-        spaceBetween: 50
-      }
-    }"
-    class="mySwiper"
-  >
-    <ng-template swiperSlide *ngFor="let produto of produto" >
-      <div class="swiper-slide" >         
-            <a class="thumbTile" routerLink="/produto/1">
-              <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}">
-            </a>                   
+    <div *ngIf="produtosCategoriaUm">
+      <h2>Filmes da Mesma Categoria</h2>
+      <swiper [slidesPerView]="1" [spaceBetween]="10" [pagination]="{
+          clickable: true
+        }" [breakpoints]="{
+          '640': {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          '768': {
+            slidesPerView: 4,
+            spaceBetween: 40
+          },
+          '1024': {
+            slidesPerView: 5,
+            spaceBetween: 50
+          }
+        }" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let produto of produtosCategoriaUm">
+          <div class="swiper-slide">
+            <a class="thumbTile" routerLink="/produto/{{produto.id}}" (click)="getProdutoLoad(produto.id)">
+              <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}" >
+            </a>  
             <h5>{{ produto.titulo | titlecase}}</h5>
             <p>{{ produto.subtitulo | titlecase}}</p>
-            <p>★☆...</p>      
-        </div>
-    </ng-template>
-  </swiper>
+            <p>★☆...</p>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+    
+    <div *ngIf="produtosOutros">
+      <h2>Outros Filmes</h2>
+      <swiper [slidesPerView]="1" [spaceBetween]="10" [pagination]="{
+          clickable: true
+        }" [breakpoints]="{
+          '640': {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          '768': {
+            slidesPerView: 4,
+            spaceBetween: 40
+          },
+          '1024': {
+            slidesPerView: 5,
+            spaceBetween: 50
+          }
+        }" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let produto of produtosOutros">
+          <div class="swiper-slide">
+            <a class="thumbTile" routerLink="/produto/{{produto.id}}" (click)="getProdutoLoad(produto.id)">
+              <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}" >
+            </a>  
+            <h5>{{ produto.titulo | titlecase}}</h5>
+            <p>{{ produto.subtitulo | titlecase}}</p>
+            <p>★☆...</p>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+    
 </section>
