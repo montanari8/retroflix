@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+
+.sobre{
+    max-width: 700px;
+    margin: auto;
+    text-align: justify;
+}
