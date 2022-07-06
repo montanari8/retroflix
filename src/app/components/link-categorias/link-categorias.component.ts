@@ -13,18 +13,18 @@ export class LinkCategoriasComponent implements OnInit {
   categorias : CategoriasProdutos[] = [
 
     { "id" : "1","name" : "Melhores Avaliados", "link" : "the-best" },
-    { "id" : "2","name" : "Ação", "link" : "the-best"  },
-    { "id" : "3","name" : "Aventura", "link" : "the-best"  },
-    { "id" : "4","name" : "Policial ", "link" : "the-best" },
-    { "id" : "5","name" : "Romance", "link" : "the-best"  },
-    { "id" : "6","name" : "Comédia" , "link" : "the-best" },
-    { "id" : "7","name" : "Drama" , "link" : "the-best" },
-    { "id" : "8","name" : "Séries ", "link" : "the-best" },
-    { "id" : "9","name" : "Família" , "link" : "the-best" },
-    { "id" : "10","name" : "Suspense" , "link" : "the-best" },
-    { "id" : "11","name" : "Terror" , "link" : "the-best" },
-    { "id" : "12","name" : "Ficção Científica" , "link" : "the-best" },
-    { "id" : "13","name" : "Musical ", "link" : "the-best" }
+    { "id" : "2","name" : "Ação", "link" : "Ação"  },
+    { "id" : "3","name" : "Aventura", "link" : "Aventura"  },
+    { "id" : "4","name" : "Policial ", "link" : "Policial" },
+    { "id" : "5","name" : "Romance", "link" : "Romance"  },
+    { "id" : "6","name" : "Comédia" , "link" : "Comédia" },
+    { "id" : "7","name" : "Drama" , "link" : "Drama" },
+    { "id" : "8","name" : "Séries", "link" : "Séries" },
+    { "id" : "9","name" : "Família" , "link" : "Família" },
+    { "id" : "10","name" : "Suspense" , "link" : "Suspense" },
+    { "id" : "11","name" : "Terror" , "link" : "Terror" },
+    { "id" : "12","name" : "Ficção Científica" , "link" : "Ficção Cientifica" },
+    { "id" : "13","name" : "Musical ", "link" : "Musical" }
 
   ]
 

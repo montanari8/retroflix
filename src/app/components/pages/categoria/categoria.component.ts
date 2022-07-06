@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Produto } from 'src/app/interfaces/Produto';
+import { ListProdutosService } from 'src/app/services/list-produtos.service';
 
 @Component({
   selector: 'app-categoria',
@@ -8,6 +10,11 @@ import { Produto } from 'src/app/interfaces/Produto';
 })
 export class CategoriaComponent implements OnInit {
 
+  private categoria : any
+  
+  produtosCategoriaUm ?:  Produto[]
+
+  /*
   produtos : Produto[] = [
 
     {enderecoImagem: "https://http2.mlstatic.com/D_NQ_NP_855671-MLB41261869266_032020-O.jpg", titulo: "The Karate Kid", subtitulo: "A Hora da Verdade"},
@@ -26,10 +33,32 @@ export class CategoriaComponent implements OnInit {
     {enderecoImagem: "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/98/15/20172684.jpg", titulo: "Indiana Jones e a Última Cruzada", subtitulo: ""}
 
   ]
+  */
 
-  constructor() { }
+  constructor(
+    private route : ActivatedRoute,
+    private listService : ListProdutosService
+  ) {
+    this.getProdutos()
+   }
 
   ngOnInit(): void {
   }
+
+  getProdutos(){
+    this.categoria = this.route.snapshot.paramMap.get("categoria")// Pega a categoria
+    
+
+    this.getPrimeiraCategoria(this.categoria)
+
+
+  }
+
+  getPrimeiraCategoria(categoria:any){
+    console.log(categoria)
+    return this.listService.getCategoria(categoria).subscribe((produto) => (this.produtosCategoriaUm = produto));
+  }
+
+  
 
 }

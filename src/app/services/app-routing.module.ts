@@ -28,6 +28,8 @@ const routes: Routes = [
 
   /* Página Produto */
   {path: 'produto/:id', component: ProdutoComponent},
+
+  {path: 'categoria/:categoria', component: CategoriaComponent},
 ];
 
 @NgModule({

@@ -2,12 +2,14 @@
     margin: 7px;
     width: 90%;
 }
-
 .sobre-itens{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: inline-block;
+    
 }
+.sobre-itens ul li{
+    list-style: none;
+}
+
 
 .sobre-itens div{
     width: 250px    ;
@@ -20,5 +22,12 @@
         max-width: 890px;
         width: 90%;
     }
+    .sobre-itens{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+ 
 
 }
