@@ -9,9 +9,10 @@ export class PrateleirasIniciaisComponent implements OnInit {
 
   constructor() { }
  
-  
+  /**/
 
   ngOnInit(): void {
+    
   }
 
 }

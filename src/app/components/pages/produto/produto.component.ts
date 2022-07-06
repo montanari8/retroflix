@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Produto } from 'src/app/interfaces/Produto';
 import { ListProdutosService } from 'src/app/services/list-produtos.service';
@@ -19,7 +19,8 @@ export class ProdutoComponent implements OnInit {
 
   constructor(
     private listService : ListProdutosService, 
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private el: ElementRef
     ) {
 
       this.getProduto()
@@ -29,6 +30,13 @@ export class ProdutoComponent implements OnInit {
      }
 
   ngOnInit(): void {
+
+    let style: string = `
+    .section-default{
+      background: linear-gradient(rgba(0, 0, 0, 1), rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.9))
+    }
+    `
+    this.createStyle(style)
     
   } 
 
@@ -77,10 +85,12 @@ export class ProdutoComponent implements OnInit {
 //
 
 
+createStyle(style: string): void {
+  const styleElement = document.createElement('style');
+  styleElement.appendChild(document.createTextNode(style));
+  this.el.nativeElement.appendChild(styleElement);
+}
 
-  
-
- 
 
 
 }

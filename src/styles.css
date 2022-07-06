@@ -6,7 +6,9 @@
     --tileBorderRadius: 4px;
 }
 
-
+body{
+    color: #fff;
+}
 body,
 ul {
     margin: 0px;
@@ -299,6 +301,10 @@ header img {
 .erroForm{
     margin-top: -22px;
     color: #b40000;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff;
 }
 
 /* Maiores que celular vertical */
