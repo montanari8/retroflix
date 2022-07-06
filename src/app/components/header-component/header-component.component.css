@@ -7,3 +7,46 @@ button{
     width: auto;
     border-radius: 5px;
 }
+
+.btn-top{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 7px;
+}
+
+.btn-top img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.search-top input{
+    background-color: black;
+    height: 40px;
+    color: rgb(216, 216, 216);
+    font-size: 9pt;
+    padding: 7px;
+    border-radius: 5px;    
+    border: 2px solid #fff;
+    margin-bottom: 1px;
+
+}
+
+.search-top input:hover{
+    background-color: black;
+    border-color: rgb(122, 0, 0);
+}
+
+.search-top input:focus{
+    border-color: rgb(88, 0, 0);
+}
+
+.search-top button{
+    width: 90px;
+    font-size: 10pt;
+    border-radius: 5px;
+    background-color: black;
+    color: #fff;
+    height: 40px;
+    border: 2px solid #fff;
+
+}
