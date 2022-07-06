@@ -15,7 +15,7 @@ export class ProdutoComponent implements OnInit {
   produtosOutros?:  Produto[]
   produto?:  Produto
 
-  public id = this.route.snapshot.paramMap.get('id')
+  public id ?: any
 
   constructor(
     private listService : ListProdutosService, 
@@ -41,10 +41,11 @@ export class ProdutoComponent implements OnInit {
   } 
 
   getProduto() {//Carregar da API apenas um item
-    const id = this.route.snapshot.paramMap.get("id")
-    console.log('VALOR DE ID ' + id)
-    if (id) {
-      this.listService.getItem(id).subscribe((produto) => (
+    //const id = this.route.snapshot.paramMap.get("id")
+    this.id = this.route.snapshot.paramMap.get("id")
+    console.log('VALOR DE ID ' + this.id)
+    if (this.id) {
+      this.listService.getItem(this.id).subscribe((produto) => (
         this.produto = produto
         ))
     }   
@@ -59,15 +60,17 @@ export class ProdutoComponent implements OnInit {
         this.produto = produto
         ))
         scrollTo({ top: 0, behavior: 'smooth' })
+        this.getCategoria()
     }   
    
   }
 
   getCategoria(){
-    const id = this.route.snapshot.paramMap.get("id")
-    console.log('VALOR DE ID ' + id)
-    if (id) {
-      this.listService.getItem(id).subscribe((produto) => (
+    //const id = this.route.snapshot.paramMap.get("id")
+    this.id = this.route.snapshot.paramMap.get("id")
+    console.log('VALOR DE ID ' + this.id)
+    if (this.id) {
+      this.listService.getItem(this.id).subscribe((produto) => (
          //console.log('categoria é ' + produto.categoria?.slice(0,1))
           this.getPrimeiraCategoria(produto.categoria?.slice(0,1))
         ))

@@ -16,6 +16,9 @@ import { AppRoutingModule } from './services/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
+
+
 import { AppComponent } from './app.component';
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
@@ -97,7 +100,7 @@ import { CategoriaComponent } from './components/pages/categoria/categoria.compo
     CommonModule, 
     FormsModule, 
     ReactiveFormsModule,
-    SwiperModule
+    SwiperModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

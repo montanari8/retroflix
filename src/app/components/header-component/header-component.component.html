@@ -1,10 +1,7 @@
 <header id="header">
     <div class="container-top">
         <div class="logo-menu-mobile">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
-                aria-expanded="false">
-                <span id="hamburger"></span>
-            </button>
+            
             <a routerLink="">
                 <img src="../assets/img/logoretroflix.png" 
                 alt="Retroflix | Reviva grandes momentos">
@@ -21,15 +18,21 @@
             <button>Minha Conta</button>
         </div>
     </div>
-    <nav id="nav">
-
-        <ul id="menu" role="menu">
-            <li><a  routerLink="/">Inicio</a></li>
-            <li><a  routerLink="/sobre">Sobre</a></li>
-            <li><a  routerLink="/categorias">Categorias</a></li>
-        </ul>
-        
-    </nav>
-
-
+   
 </header>
+<div class="container-fluid">
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="p-4">
+            <h4 class="text-white"><a  routerLink="/">Inicio</a></h4>
+            <span class="text-muted"><a  routerLink="/sobre">Sobre</a></span>
+            <span class="text-muted"><a  routerLink="/categorias">Categorias</a></span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+</div>

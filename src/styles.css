@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
@@ -27,13 +26,17 @@ a {
     text-decoration: none;
 }
 
+a:hover{
+    color: rgb(150, 0, 0);
+    text-decoration: none;
+}
+
 header{
     width: 100%;
 }
 
-a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-}
+
+
 
 header img {
     width: 90px;
@@ -46,11 +49,9 @@ header img {
 
 #header {
     box-sizing: border-box;
-    height: 120px;
 }
 
-.banner-top{
-    
+.banner-top{    
     margin-left: 7px;
     height: 45%;
     width: 100%;
@@ -82,79 +83,6 @@ header img {
     display: flex;
 }
 
-
-#menu {
-    position: absolute;
-    display: block;
-    width: 100%;
-    list-style: none;
-    top: 68px;
-    right: 0px;
-    transition: 0.6s;
-    z-index: 1000;
-    height: 0px;
-    visibility: hidden;
-    overflow-y: hidden;
-    background-color: rgb(15, 15, 15);
-}
-
-#nav.active #menu {
-    position: absolute;
-    height: calc(80vh - 68px);
-    visibility: visible;
-    overflow-y: auto;
-    background: rgba(34, 34, 34, 0.97);
-    color: black;
-
-}
-
-#menu a {
-    display: block;
-    padding: 0.5rem;
-    margin: 0 1rem;
-    border-bottom: 2px solid rgba(241, 241, 241, 0.05);
-  }
-
-#btn-mobile {
-    display: flex;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    gap: 0.5rem;
-}
-
-#hamburger {
-    border-top: 2px solid;
-    width: 20px;
-    color: #fff;
-}
-
-#hamburger::after,
-#hamburger::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: currentColor;
-    margin-top: 5px;
-    transition: 0.3s;
-    position: relative;
-}
-
-#nav.active #hamburger {
-    border-top-color: transparent;
-}
-
-#nav.active #hamburger::before {
-    transform: rotate(135deg);
-}
-
-#nav.active #hamburger::after {
-    transform: rotate(-135deg);
-    top: -7px;
-}
 
 .search-top{
     width: 100%;
@@ -286,7 +214,6 @@ header img {
 }
 
 .formas-pagamento{
-
     margin-top: 15px;
 }
 .formas-pagamento img{
@@ -295,7 +222,9 @@ header img {
 }
 
 .formas-icons{
-    margin-top: -50px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 .erroForm{
@@ -307,6 +236,26 @@ header img {
     background-color: #fff;
 }
 
+.p-4{ /*  Itens Menu nav header */
+    display: flex;
+    flex-direction: column;
+    padding-top: 7px;
+}
+
+.p-4 .text-muted{
+    margin-top: 10px;
+}
+
+/* Prateleiras*/
+
+.swiper-slide img{
+    width: 350px;
+    height: 450px;
+}
+
+
+
+
 /* Maiores que celular vertical */
 /*====================== MEDIAQUERY 880px ==========================*/
 
@@ -314,9 +263,7 @@ header img {
 
 @media (min-width: 880px) {
 
-    #header{
-        height: 110px;
-    }
+    
  
 
    .container-top{
@@ -327,22 +274,7 @@ header img {
    }
 
 
-    #menu {
-        margin-top: 7px;
-        display: flex;
-        gap: 0.5rem;
-        height: auto;
-        visibility: visible;
-        background-color: rgba(7, 7, 8, 0.7);
-        box-shadow: 100px 10px 20px #020202;
-    }
-
-    
-
-    #btn-mobile {
-        display: none;
-    }
-
+   
     .search-top{
         width: 350px; 
     }
@@ -363,6 +295,7 @@ header img {
     }
 
  
+    
 
  
 

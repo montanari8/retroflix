@@ -22,7 +22,7 @@
                 </div>
             </div>
             <hr>
-            <div class="container">
+            <div class="detalhes">
                 <div>
                     <h2>{{  produto.titulo  }}</h2>
                     <div class="detalhes-produto">
@@ -100,7 +100,7 @@
         }" class="mySwiper">
         <ng-template swiperSlide *ngFor="let produto of produtosOutros">
           <div class="swiper-slide">
-            <a class="thumbTile"  (click)="getProdutoLoad(produto.id)">
+            <a class="thumbTile" routerLink="/produto/{{produto.id}}" (click)="getProdutoLoad(produto.id)">
               <img src="{{produto.enderecoImagem}}" alt="{{produto.titulo | titlecase}} | {{produto.subtitulo | titlecase}}" >
             </a>  
             <h5>{{ produto.titulo | titlecase}}</h5>

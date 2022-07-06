@@ -2,26 +2,25 @@
     margin-bottom: 50px;
 }
 .info-produto{
-    margin-left: 0px;
+    margin-left: 7px;
     text-align: left;
 }
 h1{
     color: #fff;
     font-size: 28pt;
     margin: 0px;
-    height: 70px;
 }
 
 h2{
     color: #fff;
     font-size: 16pt;
-    margin: 0px;
-    height: 35px;
+    margin: 7px;
 }
 .titulo p{
     color: #fff;
     font-size: 10pt;
-    margin: 0px;
+    margin: 7px;
+    margin-top: 20px;
 }
 
 .preco{
@@ -31,18 +30,18 @@ h2{
 .preco p{
     color: #fff;
     font-size: 4em;
-    height: 35px;
 }
 
 .botoes{
+    margin-top: 80px;
     display: flex;    
     justify-content: flex-start;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .botoes button{
     border-radius: 10px;
+    height: 80px;
 }
 
 .compra{
@@ -57,6 +56,10 @@ h2{
     height: 50px;
 }
 
+.detalhes{
+    width: 80%;
+}
+
 .detalhes-produto{
     text-align: justify;
 }
@@ -66,7 +69,9 @@ h2{
     grid-template-columns: auto auto;
 }
 
-
+.imagem img{
+    width: 330px;
+}
 
 @media (min-width: 1100px) {
 
