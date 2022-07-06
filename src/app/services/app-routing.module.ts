@@ -8,6 +8,8 @@ import { SobreComponent } from '../components/sobre/sobre.component';
 import { CategoriasComponent } from '../components/pages/categorias/categorias.component'; // Página Categoria
 import { CategoriaComponent } from '../components/pages/categoria/categoria.component';
 import { ProdutoComponent } from '../components/pages/produto/produto.component';
+import { ContatoComponent } from '../components/pages/contato/contato.component';
+import { PoliticaReembolsoComponent } from '../components/pages/politica-reembolso/politica-reembolso.component';
 
 const routes: Routes = [
   /* Menu Componente Header */
@@ -18,6 +20,8 @@ const routes: Routes = [
   /* Menu Componente Footer */
   {path: 'cadastrar-produto', component: NovoProdutoComponent},
   {path: 'privacidade', component: PrivacidadeComponent},
+  {path: 'contato', component: ContatoComponent},
+  {path: 'politica-reembolso', component: PoliticaReembolsoComponent},
 
   /* Componentes Link Categoria */
   {path: 'the-best', component: CategoriaComponent},
